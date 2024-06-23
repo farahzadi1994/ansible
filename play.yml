@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  tasks:
+    - name: "Installing System Updates"
+      apt:
+        name: "*"
+        state: latest
+
+    - name: "Change hostname"
+      ansible.builtin.hostname:
+        name: "ir.farahzady.de"
